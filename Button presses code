@@ -1,0 +1,32 @@
+const int ODD = 9;
+const int EVEN = 8;
+const int BUTTON = 2;
+int c = 0;
+void setup()
+{
+  pinMode(EVEN, OUTPUT);
+  pinMode(ODD, OUTPUT);
+}
+
+void loop()
+{
+  
+    if(digitalRead(BUTTON)==HIGH){
+   	  c++;
+      delay(100);
+      }  
+  
+
+  if(c!=0){ 
+  if(c%2 == 0)
+  { 
+  digitalWrite(EVEN, HIGH);
+  digitalWrite(ODD, LOW);
+  }
+  else
+  if(c%2 != 0)
+  {
+  digitalWrite(ODD, HIGH);
+  digitalWrite(EVEN, LOW);
+  }}    
+}
